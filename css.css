@@ -1107,7 +1107,7 @@ figure > img {
     border: 0.125vw solid #f4c53b;
     border-radius: 4vw;
     font-weight: 700;
-    transform: translateX(100%);
+    transform: translateX(75%);
   }
   .start-screen {
     background: url(./img/bg-full.png);
@@ -1290,7 +1290,28 @@ height: 30vw;
   .switcher {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 25vw;
+  }
+
+  .switcher__divider--short {
+    bottom: 0;
+    position: absolute;
+    width: .065vw;
+left: -.5vw;
+background-color: #292d33;
+
+height: 10vw;
+  }
+  .switcher__divider--long {
+    width: .15vw;
+    background-color: #292d33;
+
+    position: absolute;
+    bottom: 0;
+    left: -1vw;
+height: 21vw;
+
   }
   .switcher__label {
     padding: 1vw 3.5vw;
