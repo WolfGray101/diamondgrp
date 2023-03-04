@@ -33,7 +33,7 @@ a:hover {
   top: 0;
   background-color: #fff;
   z-index: 10;
-  margin: 1rem 0;
+  margin: 0 auto;
 }
 .header__logo {
   display: flex;
@@ -73,12 +73,6 @@ a:hover {
 .start-screen__header {
   background: #f4c53b;
 }
-.start-screen__divider {
-  position: absolute;
-  z-index: 11;
-  background-color: #292d33;
-}
-
 .start-screen__description {
   display: block;
   font-weight: 700;
@@ -94,17 +88,9 @@ a:hover {
 .requirement-label--offer {
   font-weight: 600;
 }
-.requirement-label--divider {
+.label-divider {
   background-color: #292d33;
   position: absolute;
-  right: 0;
-  top: 0;
-}
-.requirement-label--divider-long {
-  border: 2px solid #292d33;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .requirement {
@@ -150,13 +136,8 @@ a:hover {
 .greetings-header {
   text-align: center;
 }
-
-.owner-info__title {
-}
 .owner-info__title--owner {
   font-weight: 600;
-}
-.owner-info__title--name {
 }
 .owner-info__description {
   font-style: italic;
@@ -457,19 +438,6 @@ figure > img {
     height: 6rem;
     width: 44%;
   }
-  .start-screen__divider-long {
-    width: 3px;
-    height: 20rem;
-    left: 1rem;
-    transform: translateY(-10rem);
-  }
-  .start-screen__divider-short {
-    width: 1px;
-    height: 8rem;
-    left: 1.7rem;
-    top: 2rem;
-    transform: translateY(-0%);
-  }
   .start-screen__slider {
     transform: translate(0, -5rem);
     padding: 0 0.75rem 10rem 0.75rem;
@@ -495,14 +463,18 @@ figure > img {
     background: #f4c53b;
     text-align: right;
   }
-  .requirement-label--divider {
+  .requirement__label-divider--short {
+    top: 0;
+    right: 0;
     width: 0.065rem;
     height: 2.6rem;
     transform: translate(-1.25rem, 1.1rem);
   }
-  .requirement-label--divider-long {
-    width: 0.065rem;
-    height: 10rem;
+  .requirement__label-divider--long {
+    top: 0;
+    right: 0;
+    width: 0.15rem;
+    height: 6rem;
     transform: translate(-0.75rem, 1.1rem);
   }
   .requirement {
@@ -539,6 +511,22 @@ figure > img {
   .greetings {
     margin-top: 4rem;
   }
+
+  .owner-name {
+    position: relative;
+  }
+  .greetings__label-divider--short {
+    width: 0.065vw;
+    bottom: 0;
+    left: 1.25rem;
+    height: 17vw;
+  }
+  .greetings__label-divider--long {
+    width: 2px;
+    bottom: 0;
+    left: 0.75rem;
+    height: 120%;
+  }
   .greetings-header {
     margin: 0 1.5rem;
     padding: 1rem;
@@ -551,19 +539,17 @@ figure > img {
   .owner-info__title {
     font-size: 1.5rem;
     line-height: 1.25rem;
+    margin: 1rem 2rem;
   }
-  .owner-info__title--owner {
-    margin: 2.5rem 2rem 0.5rem;
-  }
-  .owner-info__title--name {
-    margin: 0 2rem 1.5rem;
-  }
-  .owner-info__description {
+
+  .greeting__owner-info--description {
+    font-size: 1rem;
     line-height: 1.25rem;
-    margin: 0 2rem;
+    margin: 1rem 2rem;
+    font-style: italic;
   }
   .owner-info__content {
-    padding: 2rem 1rem 3rem;
+    padding: 1rem 1rem 3rem;
   }
   .about {
     padding: 1.25rem 2rem;
@@ -585,6 +571,10 @@ figure > img {
   }
   .switcher {
     background-color: #d9d9d9;
+  }
+  .switcher-container {
+    display: flex;
+    width: 100%;
   }
   .switcher__label {
     padding: 0.5rem 1.5rem;
@@ -766,7 +756,7 @@ figure > img {
     transform: translate(-50%, 0);
   }
 }
-@media screen and (min-width: 568px) and (max-width: 991px) {
+@media screen and (min-width: 568px) and (max-width: 1120px) {
   .button {
     margin-top: 1rem;
     padding: 1.25rem 2.5rem;
@@ -785,7 +775,6 @@ figure > img {
   }
   .header__select {
     flex-direction: column;
-    transform: translate(0, 25%);
   }
   .header__select-menu {
     order: 2;
@@ -811,6 +800,24 @@ figure > img {
   .start-screen__header {
     height: 12rem;
     width: 22rem;
+    position: relative;
+  }
+
+  .start-screen__label-divider--long {
+    bottom: 0;
+    left: 0;
+    width: 0.15rem;
+    height: 20rem;
+    transform: translate(0.75rem, -2.5rem);
+    z-index: 11;
+  }
+  .start-screen__label-divider--short {
+    bottom: 0;
+    left: 0;
+    width: 0.065rem;
+    height: 8rem;
+    z-index: 11;
+    transform: translate(1.25rem, -2.5rem);
   }
   .start-screen__slider {
     transform: translate(0, -10rem);
@@ -834,13 +841,17 @@ figure > img {
     font-size: 2rem;
     background: #f4c53b;
   }
-  .requirement-label--divider {
+  .requirement__label-divider--short {
+    top: 0;
+    right: 0;
     width: 0.065rem;
-    height: 4.6rem;
+    height: 5rem;
     transform: translate(-1.25rem, 1.1rem);
   }
-  .requirement-label--divider-long {
-    width: 0.065rem;
+  .requirement__label-divider--long {
+    top: 0;
+    right: 0;
+    width: 0.15rem;
     height: 10rem;
     transform: translate(-0.75rem, 1.1rem);
   }
@@ -881,19 +892,18 @@ figure > img {
   .owner-info__title {
     font-size: 1.5rem;
     line-height: 1.25rem;
+    margin: 1rem 1rem 0.5rem;
   }
-  .owner-info__title--owner {
-    margin: 2.5rem 1rem 0.5rem;
-  }
-  .owner-info__title--name {
-    margin: 0 1rem 1.5rem;
-  }
-  .owner-info__description {
+
+  .greeting__owner-info--description {
     line-height: 1.25rem;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 2rem;
   }
   .owner-info__content {
-    padding: 2rem 1rem 3rem;
+    padding: 1rem 1rem 3rem;
   }
   .about {
     padding: 4rem 1rem;
@@ -1065,7 +1075,7 @@ figure > img {
   }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1120px) {
   .button {
     margin-top: 1.5vw;
     padding: 1.25vw 2.5vw;
@@ -1117,19 +1127,25 @@ figure > img {
   .start-screen__header {
     height: 13vw;
     width: 40vw;
+    position: relative;
   }
-  .start-screen__divider-long {
-    width: 3px;
+
+  .start-screen__label-divider--long {
+    bottom: 0;
+    width: 0.15rem;
     height: 20vw;
-    left: 12vw;
-    transform: translateY(-10vw);
+    /* left: 12vw; */
+    transform: translate(12vw, -3vw);
+    z-index: 11;
   }
-  .start-screen__divider-short {
-    width: 1px;
+  .start-screen__label-divider--short {
+    bottom: 0;
+    width: 0.065rem;
     height: 8vw;
-    left: 12.75vw;
-    top: 2vw;
+    z-index: 11;
+    transform: translate(12.75vw, -3vw);
   }
+
   .start-screen__slider {
     transform: translate(0, -10vw);
     padding: 0 13.5vw 20vw 13.5vw;
@@ -1156,18 +1172,22 @@ figure > img {
     background: #f4c53b;
     text-align: right;
   }
-  .requirement-label--divider {
+
+  .requirement__label-divider--short {
+    top: 0;
+    right: 0;
     width: 0.065vw;
     height: 4.6vw;
-    top: 1.5vw;
-    right: 10.75vw;
+    transform: translate(-10.5vw, 1.5vw);
   }
-  .requirement-label--divider-long {
-    width: 0.065vw;
+  .requirement__label-divider--long {
+    top: 0;
+    right: 0;
+    width: 0.15vw;
     height: 10vw;
-    top: 1.5vw;
-    right: 10vw;
+    transform: translate(-10vw, 1.5vw);
   }
+
   .requirement {
     font-size: 1.6vw;
     padding: 0rem 13.5vw 3vw;
@@ -1211,20 +1231,19 @@ figure > img {
   .greetings-slider {
     padding: 0 13.5vw;
   }
-  .owner-info__title {
-    font-size: 1.5rem;
-    line-height: 1.25rem;
-  }
-  .owner-info__title--owner {
-    padding-top: 2vw;
-  }
-  .owner-info__title--name {
-    padding-top: 0.5vw;
-  }
-  .owner-info__description {
+ .owner-info__title {
+    font-size: 1.5vw;
     line-height: 1.25vw;
-    padding-top: 1.6vw;
+    margin: 1rem 0 0.5vw;
   }
+  .greeting__owner-info--description {
+    line-height: 1.25vw;
+    margin: 0;
+    font-size: 1.25vw;
+    font-style: italic;
+    margin-top: 3vw;
+  }
+ 
   .owner-info__content {
     padding: 2vw 0 4.5vw;
   }
@@ -1234,20 +1253,22 @@ figure > img {
     display: block;
     width: 23vw;
   }
+  .owner-name,
   .owner-info {
     position: relative;
   }
 
-  .greetings__divider--short {
-top: 2vw;
-left: -3vw;
-height: 20vw;
+  .greetings__label-divider--short {
+    width: 0.065vw;
+    top: 0;
+    left: -3vw;
+    height: 17vw;
   }
-  .greetings__divider--long {
-    top: 2vw;
+  .greetings__label-divider--long {
+    width: 0.15vw;
+    top: 0;
     left: -4vw;
-height: 30vw;
-
+    height: 34vw;
   }
   .owner-info figure {
     width: 60vw;
@@ -1290,6 +1311,7 @@ height: 30vw;
   .switcher {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: relative;
     width: 25vw;
   }
@@ -1297,21 +1319,20 @@ height: 30vw;
   .switcher__divider--short {
     bottom: 0;
     position: absolute;
-    width: .065vw;
-left: -.5vw;
-background-color: #292d33;
+    width: 0.065vw;
+    left: -0.5vw;
+    background-color: #292d33;
 
-height: 10vw;
+    height: 10vw;
   }
   .switcher__divider--long {
-    width: .15vw;
+    width: 0.15vw;
     background-color: #292d33;
 
     position: absolute;
     bottom: 0;
     left: -1vw;
-height: 21vw;
-
+    height: 21vw;
   }
   .switcher__label {
     padding: 1vw 3.5vw;
@@ -1383,13 +1404,12 @@ height: 21vw;
     position: relative;
     justify-content: space-between;
   }
-  .greetings-slider__review__greetings figure{
-    object-fit: cover
-    }
-   .greetings-slider__review__greetings figure img{
+  .greetings-slider__review__greetings figure {
+    object-fit: cover;
+  }
+  .greetings-slider__review__greetings figure img {
     height: 100%;
-    object-fit: cover
-
+    object-fit: cover;
   }
   .owner-info__content--review::before {
     top: 0;
@@ -1407,7 +1427,7 @@ height: 21vw;
     margin: 0;
     width: 100%;
     background-color: #fff;
-    padding: .75vw 2vw;
+    padding: 0.75vw 2vw;
   }
   .owner-info__content--review {
     margin: 1.6vw 13.5vw 1.6vw 5vw;
@@ -1423,19 +1443,19 @@ height: 21vw;
     background-color: #fff;
     position: relative;
     bottom: 0;
-    justify-self:end;
+    justify-self: end;
   }
-.requirement__advantages {
-  margin-top: 7.5vw;
-  font-size: 2vw;
-  padding-bottom: 0;
-}
-.requirement-items__advantages {
-  margin: 6vw 0;
-}
+  .requirement__advantages {
+    margin-top: 7.5vw;
+    font-size: 2vw;
+    padding-bottom: 0;
+  }
+  .requirement-items__advantages {
+    margin: 6vw 0;
+  }
   .requirement-items__advantages-item {
     padding: 1vw;
-    width: calc(100%/3);
+    width: calc(100% / 3);
     font-size: 1.25vw;
     font-weight: 600;
     line-height: 130%;
@@ -1459,7 +1479,7 @@ height: 21vw;
   }
   .fedback-block__form input:not(:last-child) {
     width: 100%;
-    border-radius: .5vw;
+    border-radius: 0.5vw;
     padding: 0.75vw 2vw;
   }
   .fedback-block__form label {

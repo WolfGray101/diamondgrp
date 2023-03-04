@@ -31,10 +31,10 @@
     </header>
     <main>
       <section class="start-screen">
-        <div class="start-screen__divider start-screen__divider-long"></div>
-        <div class="start-screen__divider start-screen__divider-short"></div>
-
-        <div class="start-screen__header"></div>
+        <div class="start-screen__header">
+          <div class="label-divider start-screen__label-divider--long"></div>
+          <div class="label-divider start-screen__label-divider--short"></div>
+        </div>
         <article class="start-screen__slider">
           <h1>
             ПРИГЛАШАЕМ <br />
@@ -50,8 +50,8 @@
       <div class="requirement-label">
         <p class="requirement-label--offer">ПРЕДЛОЖЕНИЕ</p>
         <p class="requirement-label--for-driver">для водителей</p>
-        <div class="requirement-label--divider"></div>
-        <div class="requirement-label--divider-long"></div>
+        <div class="label-divider requirement__label-divider--short"></div>
+        <div class="label-divider requirement__label-divider--long"></div>
       </div>
 
       <section class="requirement">
@@ -97,16 +97,19 @@
         <h3 class="greetings-header">ДОБРО ПОЖАЛОВАТЬ В КОМАНДУ</h3>
         <article class="greetings-slider">
           <div class="owner-info">
-            <div class="requirement-label--divider greetings__divider--short"></div>
-            <div class="requirement-label--divider-long greetings__divider--long"></div>
             <figure>
               <img src="./img/1dal582f.png" alt="" />
             </figure>
-            <p class="owner-info__title owner-info__title--owner">Директор</p>
-            <p class="owner-info__title owner-info__title--name">
-              Andrei Arynich
-            </p>
-            <p class="owner-info__description">Основал компанию в 2017 году</p>
+            <div class="owner-name">
+              <div class="label-divider greetings__label-divider--short"></div>
+              <div class="label-divider greetings__label-divider--long"></div>
+
+              <p class="owner-info__title"><b>Директор</b></p>
+              <p class="owner-info__title">Andrei Arynich</p>
+              <p class="owner-info__title greeting__owner-info--description">
+                Основал компанию в 2017 году
+              </p>
+            </div>
             <p class="owner-info__content">
               text text text text text text text text text text text text text
               text text text text text text text text text text text text text
@@ -139,122 +142,131 @@
         </p>
       </section>
       <div class="swither-group">
-      <section class="switcher">
-        <div class=" switcher__divider--short"></div>
-            <div class="switcher__divider--long"></div>
-           
-        <p class="about__description--switcher">
-          Взгляните на оплаты, полученные некоторыми из наших OWNER OPERATORS в
-          предыдущих месяцах и сделайте приблизительный расчет того, что вы
-          можете заработать с нами.
-        </p>
-        <div class="switcher__label switcher__label--checked">
-        <label for="" >
-          Owner Solo<input type="radio"
-        /></label>
+        <section class="switcher">
+          <div class="switcher__divider--short"></div>
+          <div class="switcher__divider--long"></div>
+
+          <p class="about__description--switcher">
+            Взгляните на оплаты, полученные некоторыми из наших OWNER OPERATORS
+            в предыдущих месяцах и сделайте приблизительный расчет того, что вы
+            можете заработать с нами.
+          </p>
+          <div class="switcher-container">
+            <div class="switcher__label switcher__label--checked">
+              Owner Solo
+            </div>
+            <div class="switcher__label switcher__label--non-checked">
+              Owner Team
+            </div>
+          </div>
+        </section>
+        <section class="table">
+          <p class="table-header">ДЕКАБРЬ 2022</p>
+
+          <article class="table-col" id="solo">
+            <div class="table-item">
+              <div class="table-item__el table-item__el--header">
+                TRUCK #1009
+              </div>
+              <div class="table-item__el">Vadim Karavaev</div>
+              <div class="table-item__el">Кол-во раб дней, 27</div>
+              <div class="table-item__el">Miles 13299</div>
+              <div class="table-item__el">Rate, $2.64</div>
+              <div class="table-item__el table-item__el--total-divider"></div>
+              <div class="table-item__el table-item__el--total">
+                Total, $35053
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="table-item__el table-item__el--header">
+                <p>TRUCK #1009</p>
+              </div>
+              <div class="table-item__el"><p>Artem Mikhalchuk</p></div>
+              <div class="table-item__el"><p>Кол-во раб дней, 24</p></div>
+              <div class="table-item__el"><p>Miles 8270</p></div>
+              <div class="table-item__el"><p>Rate, $3.45</p></div>
+              <div class="table-item__el table-item__el--total-divider"></div>
+
+              <div class="table-item__el table-item__el--total">
+                <p>Total, $28539</p>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="table-item__el table-item__el--header">
+                TRUCK #1028
+              </div>
+              <div class="table-item__el">Renata Khadikova</div>
+              <div class="table-item__el">Кол-во раб дней, 24</div>
+              <div class="table-item__el">Miles 11502</div>
+              <div class="table-item__el">Rate, $2.77</div>
+              <div class="table-item__el table-item__el--total-divider"></div>
+
+              <div class="table-item__el table-item__el--total">
+                Total, $31904
+              </div>
+            </div>
+          </article>
+
+          <article class="table-col" id="team">
+            <div class="table-item">
+              <div class="table-item__el table-item__el--header">
+                TRUCK #1009
+              </div>
+              <div class="table-item__el">Vadim Karavaev</div>
+              <div class="table-item__el">Кол-во раб дней, 27</div>
+              <div class="table-item__el">Miles 13299</div>
+              <div class="table-item__el">Rate, $2.64</div>
+              <div class="table-item__el table-item__el--total-divider"></div>
+              <div class="table-item__el table-item__el--total">
+                Total, $35053
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="table-item__el table-item__el--header">
+                <p>TRUCK #1009</p>
+              </div>
+              <div class="table-item__el"><p>Artem Mikhalchuk</p></div>
+              <div class="table-item__el"><p>Кол-во раб дней, 24</p></div>
+              <div class="table-item__el"><p>Miles 8270</p></div>
+              <div class="table-item__el"><p>Rate, $3.45</p></div>
+              <div class="table-item__el table-item__el--total-divider"></div>
+
+              <div class="table-item__el table-item__el--total">
+                <p>Total, $28539</p>
+              </div>
+            </div>
+            <div class="table-item">
+              <div class="table-item__el table-item__el--header">
+                TRUCK #1028
+              </div>
+              <div class="table-item__el">Renata Khadikova</div>
+              <div class="table-item__el">Кол-во раб дней, 24</div>
+              <div class="table-item__el">Miles 11502</div>
+              <div class="table-item__el">Rate, $2.77</div>
+              <div class="table-item__el table-item__el--total-divider"></div>
+
+              <div class="table-item__el table-item__el--total">
+                Total, $31904
+              </div>
+            </div>
+          </article>
+        </section>
       </div>
-        <label for="" class="switcher__label switcher__label--disable">
-          Owner Team<input type="radio"
-        /></label>
-      </section>
-      <section class="table">
-        <p class="table-header">ДЕКАБРЬ 2022</p>
-
-        <article class="table-col" id="solo">
-          <div class="table-item">
-            <div class="table-item__el table-item__el--header">TRUCK #1009</div>
-            <div class="table-item__el">Vadim Karavaev</div>
-            <div class="table-item__el">Кол-во раб дней, 27</div>
-            <div class="table-item__el">Miles 13299</div>
-            <div class="table-item__el">Rate, $2.64</div>
-            <div class="table-item__el table-item__el--total-divider"></div>
-            <div class="table-item__el table-item__el--total">
-              Total, $35053
-            </div>
-          </div>
-          <div class="table-item">
-            <div class="table-item__el table-item__el--header">
-              <p>TRUCK #1009</p>
-            </div>
-            <div class="table-item__el"><p>Artem Mikhalchuk</p></div>
-            <div class="table-item__el"><p>Кол-во раб дней, 24</p></div>
-            <div class="table-item__el"><p>Miles 8270</p></div>
-            <div class="table-item__el"><p>Rate, $3.45</p></div>
-            <div class="table-item__el table-item__el--total-divider"></div>
-
-            <div class="table-item__el table-item__el--total">
-              <p>Total, $28539</p>
-            </div>
-          </div>
-          <div class="table-item">
-            <div class="table-item__el table-item__el--header">TRUCK #1028</div>
-            <div class="table-item__el">Renata Khadikova</div>
-            <div class="table-item__el">Кол-во раб дней, 24</div>
-            <div class="table-item__el">Miles 11502</div>
-            <div class="table-item__el">Rate, $2.77</div>
-            <div class="table-item__el table-item__el--total-divider"></div>
-
-            <div class="table-item__el table-item__el--total">
-              Total, $31904
-            </div>
-          </div>
-        </article>
-
-        <article class="table-col" id="team">
-          <div class="table-item">
-            <div class="table-item__el table-item__el--header">TRUCK #1009</div>
-            <div class="table-item__el">Vadim Karavaev</div>
-            <div class="table-item__el">Кол-во раб дней, 27</div>
-            <div class="table-item__el">Miles 13299</div>
-            <div class="table-item__el">Rate, $2.64</div>
-            <div class="table-item__el table-item__el--total-divider"></div>
-            <div class="table-item__el table-item__el--total">
-              Total, $35053
-            </div>
-          </div>
-          <div class="table-item">
-            <div class="table-item__el table-item__el--header">
-              <p>TRUCK #1009</p>
-            </div>
-            <div class="table-item__el"><p>Artem Mikhalchuk</p></div>
-            <div class="table-item__el"><p>Кол-во раб дней, 24</p></div>
-            <div class="table-item__el"><p>Miles 8270</p></div>
-            <div class="table-item__el"><p>Rate, $3.45</p></div>
-            <div class="table-item__el table-item__el--total-divider"></div>
-
-            <div class="table-item__el table-item__el--total">
-              <p>Total, $28539</p>
-            </div>
-          </div>
-          <div class="table-item">
-            <div class="table-item__el table-item__el--header">TRUCK #1028</div>
-            <div class="table-item__el">Renata Khadikova</div>
-            <div class="table-item__el">Кол-во раб дней, 24</div>
-            <div class="table-item__el">Miles 11502</div>
-            <div class="table-item__el">Rate, $2.77</div>
-            <div class="table-item__el table-item__el--total-divider"></div>
-
-            <div class="table-item__el table-item__el--total">
-              Total, $31904
-            </div>
-          </div>
-        </article>
-      </section>
-    </div>
       <section class="greetings review__greetings">
         <h3 class="greetings-header review-header">ОТЗЫВЫ</h3>
         <article class="greetings-slider greetings-slider__review__greetings">
-            <figure>
-              <img src="./img/1dal582f.png" alt="" />
-            </figure>
+          <figure>
+            <img src="./img/1dal582f.png" alt="" />
+          </figure>
           <div class="review__owner-info">
-
-            <span class="owner-info__title owner-info__title--owner review__owner-info--title">
+            <span
+              class="owner-info__title owner-info__title--owner review__owner-info--title"
+            >
               Igor Tsymlyakov
 
-            <p class="owner-info__description ">TRUCK #1010</p>
+              <p class="owner-info__description">TRUCK #1010</p>
             </span>
-           
+
             <p class="owner-info__content owner-info__content--review">
               text text text text text text text text text text text text text
               text text text text text text text text text text text text text
@@ -267,10 +279,8 @@
               text text text text text text text text text text text text text
               text text text text text text text text text text text text text
               text text text text text text text text text text text text text
-          </p>
-            <div class="pagination">
-
-            </div>
+            </p>
+            <div class="pagination"></div>
           </div>
         </article>
       </section>
