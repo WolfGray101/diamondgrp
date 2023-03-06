@@ -196,23 +196,27 @@ figure > img {
   justify-content: space-between;
 }
 .table-item {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.table-items {
   display: flex;
   flex-direction: column;
   background-color: #d9d9d9;
+
 }
 .table-item__el {
   text-align: center;
 }
-.table-item__el:nth-child(2),
-.table-item__el:nth-child(3),
-.table-item__el:nth-child(4) {
+.table-items__el {
   border-bottom: 1px solid #aaaaaa;
+  text-align: center;
 }
 
 .table-item__el--total,
-.table-item__el--header,
-.table-item__el--total-divider {
+.table-item__el--header {
   font-weight: 600;
   margin: 0;
   border: none;
@@ -224,9 +228,6 @@ figure > img {
   background-color: #fff;
 }
 
-.table-item__el--total-divider {
-  background-color: #fff;
-}
 #team {
   display: none;
 }
@@ -602,27 +603,22 @@ figure > img {
     list-style: none;
     display: flex;
     flex-direction: column;
-    background-color: #d9d9d9;
   }
-  .table-item__el {
+  .table-items__el {
     margin: 0 0.5rem;
-    text-align: center;
     padding: 0.5rem 2rem;
   }
   .table-item__el--total,
-  .table-item__el--header,
-  .table-item__el--total-divider {
+  .table-item__el--header {
     font-size: 1rem;
     margin: 0;
+    padding: 0.5rem 0;
+
   }
   .table-item__el--header {
-    padding: 0.5rem 0;
     text-align: left;
   }
-  .table-item__el--total-divider {
-    padding: 0.2rem;
-  }
-
+  
   .review__greetings {
     margin-top: 0;
   }
@@ -637,6 +633,14 @@ figure > img {
   }
   .owner-info__content--review {
     padding: 1.75rem 2.5rem 3rem;
+  }
+  .review__owner-name {
+    padding-top: 1rem;
+  }
+  .owner-info__title--review {
+    margin: .5rem 1rem .5rem;
+    font-size: 1.25rem;
+    line-height: 1.6rem;
   }
   .owner-info__content--review::before {
     top: 1.75rem;
@@ -949,28 +953,20 @@ figure > img {
     gap: 1rem;
   }
   .table-item {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    background-color: #d9d9d9;
   }
-  .table-item__el {
+  .table-items__el {
     margin: 0 0.5rem;
-    text-align: center;
     padding: 0.5rem 2rem;
   }
   .table-item__el--total,
-  .table-item__el--header,
-  .table-item__el--total-divider {
+  .table-item__el--header {
     font-size: 1.25rem;
+    padding: 1rem;
     margin: 0;
   }
-  .table-item__el--header {
-    padding: 1rem;
-  }
-  .table-item__el--total-divider {
-    padding: 0.2rem;
-  }
+
   #team {
     display: none;
   }
@@ -1207,7 +1203,7 @@ figure > img {
     padding: 1vw;
     width: calc(100% / 3);
     font-size: 1.3vw;
-    gap: 2vw;
+    gap: 3vw;
   }
   .requirement-items__req-item--01:before,
   .requirement-items__req-item--02:before,
@@ -1231,7 +1227,7 @@ figure > img {
   .greetings-slider {
     padding: 0 13.5vw;
   }
- .owner-info__title {
+  .owner-info__title {
     font-size: 1.5vw;
     line-height: 1.25vw;
     margin: 1rem 0 0.5vw;
@@ -1243,7 +1239,7 @@ figure > img {
     font-style: italic;
     margin-top: 3vw;
   }
- 
+
   .owner-info__content {
     padding: 2vw 0 4.5vw;
   }
@@ -1360,24 +1356,20 @@ figure > img {
     list-style: none;
     display: flex;
     flex-direction: column;
-    background-color: #d9d9d9;
   }
-  .table-item__el {
+  .table-items__el {
     margin: 0 0.5vw;
-    text-align: center;
     padding: 0.75vw 2vw;
   }
   .table-item__el--total,
   .table-item__el--header,
   .table-item__el--total-divider {
-    font-size: 1.25rem;
+    font-size: 1.25vw;
     margin: 0;
   }
-  .table-item__el--header {
-    padding: 1rem;
-  }
-  .table-item__el--total-divider {
-    padding: 0.2rem;
+  .table-item__el--header,
+  .table-item__el--total {
+    padding: 1vw;
   }
   #team {
     display: none;
@@ -1423,12 +1415,11 @@ figure > img {
     width: 2vw;
     height: 1.7vw;
   }
-  .review__owner-info--title {
-    margin: 0;
-    width: 100%;
+  .review__owner-name {
     background-color: #fff;
-    padding: 0.75vw 2vw;
+    padding: 0 2.25vw 1vw;
   }
+
   .owner-info__content--review {
     margin: 1.6vw 13.5vw 1.6vw 5vw;
     flex-grow: 1;
