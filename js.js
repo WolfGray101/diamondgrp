@@ -47,7 +47,7 @@ const swiper = new Swiper('.swiper', {
   // },
 });
 
-// let showAll = document.querySelector('.menu-button-burger');
+// let openMenu = document.querySelector('.header__select-menu');
 // let body = document.querySelector('body');
 // let dFix = document.querySelector('.d-fix');
 

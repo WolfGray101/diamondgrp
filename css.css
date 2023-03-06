@@ -29,8 +29,6 @@ a:hover {
   justify-content: space-between;
   padding: 1rem 1rem 1rem 2rem;
   align-items: flex-start;
-  position: sticky;
-  top: 0;
   background-color: #fff;
   z-index: 10;
   margin: 0 auto;
@@ -59,10 +57,10 @@ a:hover {
   width: 4.25rem;
   height: 1rem;
   background-size: auto;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 .header__select-menu:hover {
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transform: scale(1.05);
 }
 .header__select option {
@@ -137,24 +135,18 @@ a:hover {
 .requirement-items__req-item--06:before {
   content: url(./img/6.png);
 }
-
-.greetings-header {
-  text-align: center;
-}
 .owner-info__title--owner {
   font-weight: 600;
 }
 .owner-info__description {
   font-style: italic;
 }
-
 figure {
   width: 100%;
 }
 figure > img {
   width: 100%;
 }
-
 .about {
   text-align: center;
 }
@@ -204,13 +196,12 @@ figure > img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 .table-items {
   display: flex;
   flex-direction: column;
   background-color: #d9d9d9;
-
 }
 .table-item__el {
   text-align: center;
@@ -417,6 +408,19 @@ figure > img {
   /* height: 100%; */
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  height: 1.5rem;
+  width: 1.5rem;
+  border: #f4c53b 2px solid;
+  border-radius: 50%;
+  color: #f4c53b;
+  content: url(./img/ic_outline-arrow-downward.png);
+}
+.swiper-button-prev {
+  transform: rotate(180deg);
+}
+
 @media screen and (min-width: 320px) and (max-width: 567px) {
   .button {
     margin-top: 1rem;
@@ -519,33 +523,48 @@ figure > img {
     height: 5.25rem;
   }
   .greetings {
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
   }
-
-  .owner-name {
+.greetings__img {
+  width: 100%;
+}
+  .owner-info {
     position: relative;
+    padding: 1rem 0;
   }
   .greetings__label-divider--short {
     width: 0.065vw;
-    bottom: 0;
+    top: 2rem;
     left: 1.25rem;
-    height: 17vw;
+    height: 6rem;
   }
   .greetings__label-divider--long {
     width: 2px;
-    bottom: 0;
+    top: 0rem;
+    transform: translateY(0);
     left: 0.75rem;
-    height: 120%;
+    height: 8rem
   }
   .greetings-header {
     margin: 0 1.5rem;
     padding: 1rem;
+    text-align: center;
     font-size: 1.25rem;
     background-color: #f4c53b;
   }
   .greetings-slider {
     background-color: #f4c53b;
   }
+
+  
+.pagination-greeting {
+  position: absolute;
+  width: 90%;
+  height: 62vw;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);z-index: 5;
+}
   .owner-info__title {
     font-size: 1.5rem;
     line-height: 1.25rem;
@@ -622,17 +641,31 @@ figure > img {
     font-size: 1rem;
     margin: 0;
     padding: 0.5rem 0;
-
   }
   .table-item__el--header {
     text-align: left;
   }
-  
+
   .review__greetings {
     margin-top: 0;
   }
   .review-header {
     background-color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 3.5rem 0 1.5rem;
+    text-align: center;
+  }
+  .review__img {
+    width: 100%;
+  }
+  .pagination-rewiew {
+    position: absolute;
+    width: 90%;
+    height: 75vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);z-index: 5;
   }
   .owner-info__title--owner {
     margin: 3rem 0.75rem 0;
@@ -643,11 +676,11 @@ figure > img {
   .owner-info__content--review {
     padding: 1.75rem 2.5rem 3rem;
   }
-  .review__owner-name {
-    padding-top: 1rem;
+  .review__owner-info {
+    padding-top: 3rem;
   }
   .owner-info__title--review {
-    margin: .5rem 1rem .5rem;
+    margin: 0.5rem 1rem 0.5rem;
     font-size: 1.25rem;
     line-height: 1.6rem;
   }
@@ -898,13 +931,26 @@ figure > img {
     height: 5.25rem;
   }
   .greetings {
-    margin-top: 4rem;
     background-color: #f4c53b;
   }
   .greetings-header {
-    padding: 1rem 0 2.5rem;
+    padding: 2.5rem 0;
     font-size: 1.8rem;
+    text-align: center;
+    background-color: #f4c53b;
   }
+  .greetings__img{
+width: 100%;  
+}
+
+.pagination-greeting {
+  position: absolute;
+  width: 90%;
+  height: 60vw;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);z-index: 5;
+}
   .owner-info__title {
     font-size: 1.5rem;
     line-height: 1.25rem;
@@ -984,6 +1030,27 @@ figure > img {
   }
   .review__greetings {
     margin-top: 1.5rem;
+  }
+  .review-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .review__img{
+    width: 100%;
+
+  }
+  .pagination-rewiew {
+    position: absolute;
+    width: 90%;
+    height: 72vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);z-index: 5;
+  }
+  .review__owner-info {
+margin-top: 4rem;
   }
   .owner-info__content--review {
     padding: 2rem 4rem 3rem;
@@ -1130,9 +1197,9 @@ figure > img {
     font-weight: 700;
     transform: translateX(75%);
   }
-  .header__phone-num:hover { 
+  .header__phone-num:hover {
     transform: translateX(75%);
-    box-shadow: 0 0 .5vw .05vw #f4c53b;
+    box-shadow: 0 0 0.5vw 0.05vw #f4c53b;
   }
   .start-screen {
     background: url(./img/bg-full.png);
@@ -1233,18 +1300,27 @@ figure > img {
     width: 4.5vw;
     height: 5.25vw;
   }
-  .greetings {
+  .greetings-header {
     margin-top: 4vw;
     margin-right: 13.5vw;
-    background-color: #f4c53b;
-  }
-  .greetings-header {
     padding: 2.5vw 3.5vw;
     text-align: right;
     font-size: 1.8vw;
+    background-color: #f4c53b;
   }
   .greetings-slider {
-    padding: 0 13.5vw;
+    /* display: flex; */
+    width: 100%;
+    position: relative;
+    background-color: #f4c53b;
+  }
+
+  .greetings__img {
+    order: 2;
+    width: 60vw;
+    position: absolute;
+    right: 0;
+    z-index: 2;
   }
   .owner-info__title {
     font-size: 1.5vw;
@@ -1253,37 +1329,32 @@ figure > img {
   }
   .greeting__owner-info--description {
     line-height: 1.25vw;
-    margin: 0;
+    margin:1.5vw 0;
     font-size: 1.25vw;
     font-style: italic;
-    margin-top: 3vw;
   }
-
-  .owner-info__content {
-    padding: 2vw 0 4.5vw;
-  }
-  .owner-info__content,
-  .owner-info__description,
-  .owner-info__title {
-    display: block;
-    width: 23vw;
-  }
-  .owner-name,
   .owner-info {
+    padding-left: 13.5vw;
     position: relative;
+    align-self: flex-start;
+    padding-bottom: 5vw;
+    width: 40vw;
+  }
+  .owner-info__content {
+    padding: 0 4vw 0 0;
   }
 
   .greetings__label-divider--short {
     width: 0.065vw;
     top: 0;
-    left: -3vw;
+    left: 10.75vw;
     height: 17vw;
   }
   .greetings__label-divider--long {
     width: 0.15vw;
     top: 0;
-    left: -4vw;
-    height: 34vw;
+    left: 10vw;
+    height: 32vw;
   }
   .owner-info figure {
     width: 60vw;
@@ -1400,6 +1471,15 @@ figure > img {
   .review-header {
     padding: 7.5vw 13.5vw 2vw;
     text-align: left;
+    margin-right: 13.5vw;
+    font-size: 1.8vw;
+  }
+  .review__img {
+    width: 55vw;
+    object-fit: cover;
+    overflow: visible;
+    top: 0;
+    align-self: flex-start;
   }
   .greetings-slider__review__greetings {
     display: flex;
@@ -1456,7 +1536,7 @@ figure > img {
     justify-self: end;
   }
   .requirement__advantages {
-    margin-top: 7.5vw;
+    margin-top: 13vw;
     font-size: 2vw;
     padding-bottom: 0;
   }
@@ -1559,9 +1639,8 @@ figure > img {
     width: 20vw;
     /* height: 2vw; */
     position: relative;
-    transform: translate(15vw, -1vw);
+    transform: translate(15vw, 3vw);
     z-index: 5;
-
   }
   .pagination-rewiew {
     display: flex;
@@ -1570,21 +1649,29 @@ figure > img {
     width: 20vw;
     /* height: 2vw; */
     position: relative;
-    transform: translate(60vw, -1vw);
+    transform: translate(62vw, 4vw);
     z-index: 5;
-      }
-      .swiper-button-next, .swiper-button-prev {
-        height: 1.5vw;
-        width: 1.5vw;
-        border: #f4c53b .1vw solid;
-        border-radius: 50%; 
-        color: #f4c53b;
-        content: url(./img/ic_outline-arrow-downward.png);
-      }
-    .swiper-button-prev {
-      transform: rotate(180deg);
-      }
-      .swiper-pagination-bullet-active {
-        background: #f4c53b;
-      }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    height: 1.5vw;
+    width: 1.5vw;
+    border: #f4c53b 0.1vw solid;
+    border-radius: 50%;
+    color: #f4c53b;
+    content: url(./img/ic_outline-arrow-downward.png);
+  }
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+  .swiper-pagination-bullet-active {
+    background: #f4c53b;
+  }
+  .swiper {
+    overflow: visible;
+    height: 30vw;
+  }
+  main {
+    overflow-x: hidden;
+  }
 }
