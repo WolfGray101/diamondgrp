@@ -9,7 +9,7 @@ a {
 }
 a:hover {
   transition-duration: 0.3s;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 .button {
   background-color: #f4c53b;
@@ -59,6 +59,11 @@ a:hover {
   width: 4.25rem;
   height: 1rem;
   background-size: auto;
+  transition-duration: .3s;
+}
+.header__select-menu:hover {
+  transition-duration: .3s;
+  transform: scale(1.05);
 }
 .header__select option {
   border-radius: 0.5rem;
@@ -406,6 +411,10 @@ figure > img {
 .social-group__item {
   background-position: center;
   background-repeat: no-repeat;
+}
+.swiper {
+  width: 100%;
+  /* height: 100%; */
 }
 
 @media screen and (min-width: 320px) and (max-width: 567px) {
@@ -759,6 +768,9 @@ figure > img {
     left: 50%;
     transform: translate(-50%, 0);
   }
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
 }
 @media screen and (min-width: 568px) and (max-width: 1120px) {
   .button {
@@ -1069,6 +1081,9 @@ figure > img {
     left: 50%;
     transform: translate(-50%, 0);
   }
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
 }
 
 @media screen and (min-width: 1120px) {
@@ -1114,6 +1129,10 @@ figure > img {
     border-radius: 4vw;
     font-weight: 700;
     transform: translateX(75%);
+  }
+  .header__phone-num:hover { 
+    transform: translateX(75%);
+    box-shadow: 0 0 .5vw .05vw #f4c53b;
   }
   .start-screen {
     background: url(./img/bg-full.png);
@@ -1533,4 +1552,39 @@ figure > img {
     bottom: 1.5rem;
     right: 13.5vw;
   }
+  .pagination-greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    /* height: 2vw; */
+    position: relative;
+    transform: translate(15vw, -1vw);
+    z-index: 5;
+
+  }
+  .pagination-rewiew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    /* height: 2vw; */
+    position: relative;
+    transform: translate(60vw, -1vw);
+    z-index: 5;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        height: 1.5vw;
+        width: 1.5vw;
+        border: #f4c53b .1vw solid;
+        border-radius: 50%; 
+        color: #f4c53b;
+        content: url(./img/ic_outline-arrow-downward.png);
+      }
+    .swiper-button-prev {
+      transform: rotate(180deg);
+      }
+      .swiper-pagination-bullet-active {
+        background: #f4c53b;
+      }
 }
