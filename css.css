@@ -159,7 +159,7 @@ figure > img {
 .about__map {
   background-image: url(./img/карта.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 90% 100%;
   background-position: center;
 }
 
@@ -661,10 +661,14 @@ main {
     padding: 1.25rem 2rem;
     text-align: center;
   }
+  .about__map {
+    background-size: cover;
+  }
   .about__header {
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .about__description {
     font-size: 1rem;
@@ -1058,11 +1062,11 @@ main {
     padding: 1rem 1rem 3rem;
   }
   .about {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem 1.5rem;
   }
   .about__header {
-    margin: 1.5rem;
     font-size: 2rem;
+    margin-bottom: 2rem;
   }
   .about__description {
     font-size: 1.25rem;
