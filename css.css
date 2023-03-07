@@ -845,6 +845,7 @@ main {
   .footer-contacts {
     padding: 4.5rem 0 0;
     width: 50%;
+    gap: 1.5rem;
   }
   .footer-navigate p {
     margin-bottom: 1.3rem;
