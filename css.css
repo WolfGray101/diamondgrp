@@ -1235,6 +1235,21 @@ main {
   .swiper-pagination-bullet-active {
     background: #000;
   }
+
+  .modal__menu {
+    padding-right: 5vw;
+   }
+   .menu__label-divider--short {
+     height: 100%;
+     width: 0.05rem;
+     left: -2vw;
+   }
+   .menu__label-divider--long {
+     height: 220%;
+     width: 0.2rem;
+     left: -3vw;
+     top: -120%;
+   }
 }
 
 @media screen and (min-width: 1120px) {
@@ -1255,12 +1270,21 @@ main {
   .selector {
     order: 2;
   }
+ option {
+    padding: .5rem 1rem;
+  }
   .header__select {
     align-items: center;
   }
   .header__select-menu {
     order: 1;
+padding: 1.5rem;
+
   }
+  .selector:hover,
+  .header__select-menu:hover {
+cursor: pointer; 
+ }
   .header__phone-num {
     padding: 0;
     border: none;

@@ -58,10 +58,13 @@ const switcherItems = document.querySelectorAll('.table-col')
 openMenu.addEventListener('click', ()=> {
   modal.classList.add('modal-container__open')
   body.style.overflow='hidden'
+  body.style.background='rgba(170, 170, 170, 1)'
 })
 closeBtn.addEventListener('click', () => {
   modal.classList.remove('modal-container__open')
   body.style.overflow='visible'
+  body.style.background='none'
+
 
 })
 for (let el of menuItems) {
