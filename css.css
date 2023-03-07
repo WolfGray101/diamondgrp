@@ -12,7 +12,8 @@ a {
 }
 a:hover,
 li:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  text-decoration: underline;
 
   transition-duration: 0.3s;
 }
@@ -444,9 +445,10 @@ main {
 .modal-container {
   background-color: #f4c53b;
   position: absolute;
-  left: -9999;
   opacity: 0;
-  transition-duration: 0.3s;
+  transition-duration: 0;
+  top: -9999;
+
 }
 .modal-container__open {
   width: 100vw;
@@ -457,7 +459,7 @@ main {
   top: 0;
   left: 0;
   opacity: 1;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   z-index: 10000;
   justify-content: flex-end;
   padding-right: 3rem;
@@ -465,9 +467,16 @@ main {
 }
 .close-btn {
   content: url(./img/close.png);
+  padding: 1rem;
   position: absolute;
   right: 5vw;
+  transition-duration: .3s;
   top: 5vw;
+}
+.close-btn:hover {
+  transform: scale(1.1);
+  transition-duration: .2s;
+  cursor: pointer;
 }
 .modal__menu {
   display: flex;
