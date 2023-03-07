@@ -13,17 +13,17 @@
   </head>
   <body>
     <aside class="modal-container ">
-      <div class="close-btn">X</div>
+      <div class="close-btn"></div>
       <div class="modal__menu">
         <div class="label-divider menu__label-divider--short"></div>
          <div class="label-divider menu__label-divider--long"></div>
  
-        <div class="modal__menu-item">Главная</div>
-        <div class="modal__menu-item">Предложение</div>
-        <div class="modal__menu-item">Команда</div>
-        <div class="modal__menu-item">Расчет</div>
-        <div class="modal__menu-item">Отзывы</div>
-        <div class="modal__menu-item">Преимущества</div>
+        <div class="modal__menu-item"><a href="/">Главная</a> </div>
+        <div class="modal__menu-item"><a href="#offer">Предложение</a></div>
+        <div class="modal__menu-item"><a href="#team">Команда</a></div>
+        <div class="modal__menu-item"><a href="#price">Расчет</a></div>
+        <div class="modal__menu-item"><a href="#review">Отзывы</a></div>
+        <div class="modal__menu-item"><a href="#geetings">Преимущества</a></div>
       </div>
     </aside>
     <header class="header">
@@ -66,7 +66,7 @@
           <a href="#fb-block" class="button start-screen__btn">ПРИСОЕДИНИТЬСЯ К НАМ</a>
         </article>
       </section>
-      <div class="requirement-label">
+      <div class="requirement-label" id="offer">
         <p class="requirement-label--offer">ПРЕДЛОЖЕНИЕ</p>
         <p class="requirement-label--for-driver">для водителей</p>
         <div class="label-divider requirement__label-divider--short"></div>
@@ -112,7 +112,7 @@
           </div>
         </div>
       </section>
-      <h3 class="greetings-header">ДОБРО ПОЖАЛОВАТЬ В КОМАНДУ</h3>
+      <h3 class="greetings-header" id="team">ДОБРО ПОЖАЛОВАТЬ В КОМАНДУ</h3>
 
       <section class="swiper greetings">
         <div class="swiper-wrapper">
@@ -127,7 +127,7 @@
               <p class="owner-info__title greeting__owner-info--description">
                 Основал компанию в 2017 году
               </p>
-              <p class="owner-info__content">
+              <div class="owner-info__content">
                 text text text text text text text text text text text text text
                 text text text text text text text text text text text text text
                 text text text text text text text text text text text text text
@@ -138,7 +138,7 @@
                 text text text text text text text text text text text text text
                 text text text text text text text text text text text text text
                 text text text text
-              </p>
+              </div>
             </div>
           </article>
           <article class="swiper-slide greetings-slider">
@@ -214,7 +214,7 @@
           можете заработать с нами.
         </p>
       </section>
-      <div class="swither-group">
+      <div class="swither-group" id="price">
         <section class="switcher">
           <div class="switcher__divider--short"></div>
           <div class="switcher__divider--long"></div>
@@ -329,13 +329,13 @@
           </article>
         </section>
       </div>
-      <section class="greetings review__greetings">
+      <section class="greetings review__greetings" id="review">
         <h3 class="review-header">ОТЗЫВЫ</h3>
 
         <div class="swiper">
           <div class="swiper-wrapper">
             <article
-              class="swiper-slide greetings-slider greetings-slider__review__greetings"
+              class="swiper-slide greetings-slider__review__greetings"
             >
               <img src="./img/truck-guy.png" alt="" class="review__img" />
               <div class="review__owner-info">
@@ -361,11 +361,10 @@
                   text text text text text text text text text text text text
                   text text text text text text text text text text text
                 </p>
-                <div class="pagination"></div>
               </div>
             </article>
             <article
-              class="swiper-slide greetings-slider greetings-slider__review__greetings"
+              class="swiper-slide greetings-slider__review__greetings"
             >
               <img src="./img/truck-guy.png" alt="" class="review__img" />
               <div class="review__owner-info">
@@ -391,11 +390,10 @@
                   text text text text text text text text text text text text
                   text text text text text text text text text text text
                 </p>
-                <div class="pagination"></div>
               </div>
             </article>
             <article
-              class="swiper-slide greetings-slider greetings-slider__review__greetings"
+              class="swiper-slide greetings-slider__review__greetings"
             >
               <img src="./img/truck-guy.png" alt="" class="review__img" />
               <div class="review__owner-info">
@@ -421,7 +419,6 @@
                   text text text text text text text text text text text text
                   text text text text text text text text text text text
                 </p>
-                <div class="pagination"></div>
               </div>
             </article>
           </div>
@@ -437,7 +434,7 @@
           </div>
         </div>
       </section>
-      <section class="requirement requirement__advantages">
+      <section class="requirement requirement__advantages" id="greetings">
         <h3 class="advantages">НАШИ ПРЕИМУЩЕСТВА</h3>
         <div class="requirement-items requirement-items__advantages">
           <div

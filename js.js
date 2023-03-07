@@ -47,8 +47,28 @@ const swiper = new Swiper('.swiper', {
   // },
 });
 
-// let openMenu = document.querySelector('.header__select-menu');
-// let body = document.querySelector('body');
+let openMenu = document.querySelector('.header__select-menu');
+let modal = document.querySelector('.modal-container')
+let body = document.querySelector('body');
+let menuItems = document.querySelectorAll('.modal__menu-item')
+
+let closeBtn = document.querySelector('.close-btn')
+openMenu.addEventListener('click', ()=> {
+  modal.classList.add('modal-container__open')
+  body.style.overflow='hidden'
+})
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('modal-container__open')
+  body.style.overflow='visible'
+
+})
+for (let el of menuItems) {
+  el.addEventListener('click', () => {
+    modal.classList.remove('modal-container__open')
+    body.style.overflow='visible'
+  
+  })
+}
 // let dFix = document.querySelector('.d-fix');
 
 // let cardItems = document.querySelectorAll('.modal-block');
