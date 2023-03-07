@@ -450,7 +450,7 @@ main {
   position: absolute;
   opacity: 0;
   transition-duration: 0;
-  top: -9999;
+  top: -9999px;
 
 }
 .modal-container__open {
@@ -1272,6 +1272,7 @@ main {
     align-items: center;
     padding: 1vw 13.5vw;
     margin: 0 auto;
+    position: relative;
   }
   .header__logo {
     width: 13.5vw;
