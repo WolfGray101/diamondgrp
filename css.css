@@ -1086,7 +1086,7 @@ main {
     flex-direction: column;
   }
   .switcher__label {
-    padding: 1rem 3.5rem;
+    padding: 1rem 3rem;
     width: 18rem;
     font-size: 1.5rem;
   }
