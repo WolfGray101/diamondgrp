@@ -893,6 +893,7 @@ main {
     bottom: 1.5rem;
     left: 50%;
     transform: translate(-50%, 0);
+    min-width: 250px;
   }
   .swiper-pagination-bullet-active {
     background: #000;
