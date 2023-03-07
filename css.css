@@ -10,9 +10,11 @@ a {
   text-decoration: none;
   transition-duration: 0.3s;
 }
-a:hover {
+a:hover,
+li:hover {
+  transform: scale(1.05);
+
   transition-duration: 0.3s;
-  /* transform: scale(1.05); */
 }
 .button {
   background-color: #f4c53b;
@@ -484,8 +486,7 @@ main {
   left: -1rem;
   top: -100%;
 }
-.modal__menu-item {
-}
+
 
 @media screen and (min-width: 320px) and (max-width: 567px) {
   .button {
@@ -1771,5 +1772,19 @@ main {
   .modal-container__open {
     width: 50vw;
     left: 50%;
+  }
+  .modal__menu {
+   padding-right: 12vw;
+  }
+  .menu__label-divider--short {
+    height: 100%;
+    width: 0.05rem;
+    left: -2vw;
+  }
+  .menu__label-divider--long {
+    height: 220%;
+    width: 0.2rem;
+    left: -3vw;
+    top: -120%;
   }
 }
