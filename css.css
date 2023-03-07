@@ -3,7 +3,7 @@
   box-sizing: border-box;
   color: #292d33;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 a {
@@ -184,7 +184,7 @@ figure > img {
   background-color: #f4c53b;
 
   transform: scale(1.02);
-} 
+}
 
 .table-header {
   text-align: center;
@@ -424,6 +424,18 @@ figure > img {
 .swiper-button-prev {
   transform: rotate(180deg);
 }
+
+.swiper-pagination__greeting {
+  top: 60vw !important;
+}
+.swiper-pagination__review {
+  top: 70vw !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 30vw;
+}
 main {
   position: relative;
 }
@@ -432,7 +444,7 @@ main {
   position: absolute;
   left: -9999;
   opacity: 0;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 .modal-container__open {
   width: 100vw;
@@ -443,7 +455,7 @@ main {
   top: 0;
   left: 0;
   opacity: 1;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   z-index: 10000;
   justify-content: flex-end;
   padding-right: 3rem;
@@ -463,12 +475,12 @@ main {
 }
 .menu__label-divider--short {
   height: 100%;
-  width: .05rem;
-  left: -.5rem;
+  width: 0.05rem;
+  left: -0.5rem;
 }
 .menu__label-divider--long {
   height: 200%;
-  width: .2rem;
+  width: 0.2rem;
   left: -1rem;
   top: -100%;
 }
@@ -519,7 +531,6 @@ main {
     margin-right: 3rem;
     font-size: 1rem;
     margin-bottom: 2.5rem;
-
   }
   .start-screen__btn {
     margin-top: 2rem;
@@ -580,9 +591,9 @@ main {
   .greetings {
     /* margin-top: 4rem; */
   }
-.greetings__img {
-  width: 100%;
-}
+  .greetings__img {
+    width: 100%;
+  }
   .owner-info {
     position: relative;
     padding: 1rem 0;
@@ -598,7 +609,7 @@ main {
     top: 0rem;
     transform: translateY(0);
     left: 0.75rem;
-    height: 8rem
+    height: 8rem;
   }
   .greetings-header {
     margin: 0 1.5rem;
@@ -611,15 +622,16 @@ main {
     background-color: #f4c53b;
   }
 
-  
-.pagination-greeting {
-  position: absolute;
-  width: 90%;
-  height: 62vw;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);z-index: 5;
-}
+  .pagination-greeting {
+    position: absolute;
+    width: 90%;
+    height: 62vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+
   .owner-info__title {
     font-size: 1.5rem;
     line-height: 1.25rem;
@@ -648,7 +660,6 @@ main {
     font-size: 1rem;
     line-height: 1.1rem;
     margin-bottom: 2.5rem;
-
   }
   .button__about {
     margin: 1.5rem auto;
@@ -723,7 +734,8 @@ main {
     height: 75vw;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);z-index: 5;
+    transform: translateX(-50%);
+    z-index: 5;
   }
   .owner-info__title--owner {
     margin: 3rem 0.75rem 0;
@@ -737,7 +749,10 @@ main {
   .review__owner-info {
     padding-top: 3rem;
     background-color: #f4c53b;
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
+  }
+  .owner-info {
+    padding-top: 2rem;
   }
   .owner-info__title--review {
     margin: 0.5rem 1rem 0.5rem;
@@ -1000,18 +1015,22 @@ main {
     text-align: center;
     background-color: #f4c53b;
   }
-  .greetings__img{
-width: 100%;  
-}
+  .greetings__img {
+    width: 100%;
+  }
 
-.pagination-greeting {
-  position: absolute;
-  width: 90%;
-  height: 60vw;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);z-index: 5;
-}
+  .pagination-greeting {
+    position: absolute;
+    width: 90%;
+    height: 60vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+  .owner-info {
+    padding-top: 2rem;
+  }
   .owner-info__title {
     font-size: 1.5rem;
     line-height: 1.25rem;
@@ -1039,7 +1058,6 @@ width: 100%;
     font-size: 1.25rem;
     line-height: 1.5rem;
     margin-bottom: 2.5rem;
-
   }
   .button__about {
     margin: 1.5rem;
@@ -1093,9 +1111,8 @@ width: 100%;
     font-size: 1.8rem;
     font-weight: 700;
   }
-  .review__img{
+  .review__img {
     width: 100%;
-
   }
   .pagination-rewiew {
     position: absolute;
@@ -1103,10 +1120,11 @@ width: 100%;
     height: 72vw;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);z-index: 5;
+    transform: translateX(-50%);
+    z-index: 5;
   }
   .review__owner-info {
-margin-top: 4rem;
+    margin-top: 4rem;
   }
   .owner-info__content--review {
     padding: 2rem 4rem 3rem;
@@ -1382,7 +1400,7 @@ margin-top: 4rem;
   }
   .greeting__owner-info--description {
     line-height: 1.25vw;
-    margin:1.5vw 0;
+    margin: 1.5vw 0;
     font-size: 1.25vw;
     font-style: italic;
   }
@@ -1397,7 +1415,6 @@ margin-top: 4rem;
     padding: 0 4vw 0 0;
     height: 20vw;
     overflow: hidden;
-
   }
 
   .greetings__label-divider--short {
@@ -1482,13 +1499,12 @@ margin-top: 4rem;
     width: 16vw;
     font-size: 1.6vw;
   }
- 
+
   .switcher__label--checked::after {
-    content: '';
+    content: "";
     background-color: #f4c53b;
     width: 4vw;
     height: 100%;
-
   }
   .table {
     padding: 0;
@@ -1563,14 +1579,15 @@ margin-top: 4rem;
     object-fit: cover;
   }
   .owner-info__content--review::before {
-    top: 0;
-    left: -3vw;
+    top: 2vw;
+    left: 1.5vw;
     width: 2vw;
     height: 1.7vw;
+    z-index: 10;
   }
   .owner-info__content--review::after {
     /* bottom: 0; */
-    right: -2vw;
+    right: 11vw;
     width: 2vw;
     height: 1.7vw;
   }
@@ -1580,9 +1597,8 @@ margin-top: 4rem;
   }
 
   .owner-info__content--review {
-    margin: 1.6vw 13.5vw 1.6vw 5vw;
+    padding: 1.6vw 13.5vw 1.6vw 5vw;
     flex-grow: 1;
-    padding: 0;
     width: auto;
   }
   .advantages {
@@ -1692,30 +1708,11 @@ margin-top: 4rem;
     bottom: 1.5rem;
     right: 13.5vw;
   }
-  .pagination-greeting {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20vw;
-    /* height: 2vw; */
-    position: relative;
-    transform: translate(15vw, 3vw);
-    z-index: 5;
-  }
-  .pagination-rewiew {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20vw;
-    /* height: 2vw; */
-    position: relative;
-    transform: translate(62vw, 4vw);
-    z-index: 5;
-  }
+
   .swiper-button-next,
   .swiper-button-prev {
-    height: 1.5vw;
-    width: 1.5vw;
+    height: 2.5vw;
+    width: 2.5vw;
     border: #f4c53b 0.1vw solid;
     border-radius: 50%;
     color: #f4c53b;
@@ -1724,13 +1721,50 @@ margin-top: 4rem;
   .swiper-button-prev {
     transform: rotate(180deg);
   }
+  .swiper-pagination-bullet {
+    width: 0.8vw;
+    height: 0.8vw;
+  }
   .swiper-pagination-bullet-active {
+    width: 0.8vw;
+    height: 0.8vw;
     background: #f4c53b;
   }
+
   .swiper {
     overflow: visible;
     height: 30vw;
   }
+  .swiper-pagination__review {
+    bottom: -6vw !important;
+
+    top: 34.5vw !important;
+    left: 73% !important;
+  }
+  .swiper-pagination__greeting {
+    bottom: -6vw !important;
+
+    top: 32.5vw !important;
+    left: 25% !important;
+  }
+  .swiper-button-prev__review {
+    left: 65vw;
+    top: 35vw;
+  }
+  .swiper-button-next__review {
+    top: 35vw;
+    right: 15vw;
+  }
+
+  .swiper-button-prev__greeting {
+    left: 15vw;
+    top: 33vw;
+  }
+  .swiper-button-next__greeting {
+    top: 33vw;
+    right: 65vw;
+  }
+
   main {
     overflow-x: hidden;
   }
