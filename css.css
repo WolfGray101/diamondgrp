@@ -1,7 +1,9 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 * {
   margin: 0;
   box-sizing: border-box;
   color: #292d33;
+  font-family: 'Montserrat', sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -894,7 +896,7 @@ main {
     background: #000;
   }
 }
-@media screen and (min-width: 568px) and (max-width: 1120px) {
+@media screen and (min-width: 567px) and (max-width: 1120px) {
   .button {
     margin-top: 1rem;
     padding: 1.25rem 2.5rem;
