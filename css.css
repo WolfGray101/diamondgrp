@@ -1198,6 +1198,7 @@ main {
   }
   .footer {
     padding: 5rem 1rem 7rem;
+    justify-content: space-between;
   }
   .footer-navigate {
     padding: 0 3rem;
