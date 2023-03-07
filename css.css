@@ -3,6 +3,9 @@
   box-sizing: border-box;
   color: #292d33;
 }
+html{
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
   transition-duration: 0.3s;
@@ -420,6 +423,54 @@ figure > img {
 .swiper-button-prev {
   transform: rotate(180deg);
 }
+main {
+  position: relative;
+}
+.modal-container {
+  background-color: #f4c53b;
+  position: absolute;
+  left: -9999;
+  opacity: 0;
+  transition-duration: .3s;
+}
+.modal-container__open {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition-duration: .3s;
+  z-index: 10000;
+  justify-content: flex-end;
+  padding-right: 3rem;
+}
+.close-btn {
+  position: absolute;
+  right: 5vw;
+  top: 5vw;
+}
+.modal__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+.menu__label-divider--short {
+  height: 100%;
+  width: .05rem;
+  left: -.5rem;
+}
+.menu__label-divider--long {
+  height: 200%;
+  width: .2rem;
+  left: -1rem;
+  top: -100%;
+}
+.modal__menu-item {
+}
 
 @media screen and (min-width: 320px) and (max-width: 567px) {
   .button {
@@ -465,6 +516,8 @@ figure > img {
   .start-screen__description {
     margin-right: 3rem;
     font-size: 1rem;
+    margin-bottom: 2.5rem;
+
   }
   .start-screen__btn {
     margin-top: 2rem;
@@ -592,6 +645,8 @@ figure > img {
   .about__description {
     font-size: 1rem;
     line-height: 1.1rem;
+    margin-bottom: 2.5rem;
+
   }
   .button__about {
     margin: 1.5rem auto;
@@ -883,6 +938,7 @@ figure > img {
   .start-screen__description {
     width: 50%;
     font-size: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   .requirement-label {
     width: 27.5rem;
@@ -977,6 +1033,8 @@ width: 100%;
   .about__description {
     font-size: 1.25rem;
     line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+
   }
   .button__about {
     margin: 1.5rem;
@@ -1155,7 +1213,6 @@ margin-top: 4rem;
 
 @media screen and (min-width: 1120px) {
   .button {
-    margin-top: 1.5vw;
     padding: 1.25vw 2.5vw;
     line-height: 1.3vw;
     font-size: 1vw;
@@ -1242,9 +1299,7 @@ margin-top: 4rem;
   .start-screen__description {
     width: 50%;
     font-size: 1.5vw;
-  }
-  .start-screen__btn {
-    margin-top: 2.5vw;
+    margin-bottom: 3.5vw;
   }
   .requirement-label {
     width: 40vw;
@@ -1372,6 +1427,7 @@ margin-top: 4rem;
   .about__description {
     font-size: 1.25vw;
     line-height: 1.5vw;
+    margin-bottom: 2.5vw;
   }
   .about__description--switcher {
     margin-bottom: 4.5vw;

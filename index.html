@@ -12,6 +12,20 @@
     <link rel="stylesheet" href="css.css" />
   </head>
   <body>
+    <aside class="modal-container ">
+      <div class="close-btn">X</div>
+      <div class="modal__menu">
+        <div class="label-divider menu__label-divider--short"></div>
+         <div class="label-divider menu__label-divider--long"></div>
+ 
+        <div class="modal__menu-item">Главная</div>
+        <div class="modal__menu-item">Предложение</div>
+        <div class="modal__menu-item">Команда</div>
+        <div class="modal__menu-item">Расчет</div>
+        <div class="modal__menu-item">Отзывы</div>
+        <div class="modal__menu-item">Преимущества</div>
+      </div>
+    </aside>
     <header class="header">
       <div class="header__logo"></div>
       <a href="tel:+1 (224) 470-3109" class="header__phone-num">
@@ -34,6 +48,7 @@
       </div>
     </header>
     <main>
+     
       <section class="start-screen">
         <div class="start-screen__header">
           <div class="label-divider start-screen__label-divider--long"></div>
@@ -48,7 +63,7 @@
             >Получайте 90% от вашего общего валового дохода в качестве OWNER
             OPERATORS</span
           >
-          <button class="button start-screen__btn">ПРИСОЕДИНИТЬСЯ К НАМ</button>
+          <a href="#fb-block" class="button start-screen__btn">ПРИСОЕДИНИТЬСЯ К НАМ</a>
         </article>
       </section>
       <div class="requirement-label">
@@ -187,7 +202,7 @@
           Присоединяйтесь к нашей команде опытных профессионалов и просто
           замечательных людей, которые заботятся друг о друге.
         </p>
-        <button class="button button__about">ЗАПОЛНИТЬ ЗАЯВКУ</button>
+        <a  href="#fb-block" class="button button__about">ЗАПОЛНИТЬ ЗАЯВКУ</a>
       </section>
       <section class="about about-1440">
         <h2 class="about__header">
@@ -461,7 +476,7 @@
         </div>
       </section>
       <div class="divider-yellow"></div>
-      <section class="fedback-block">
+      <section id = "fb-block" class="fedback-block">
         <h2 class="fedback-block__header">
           ДАВАЙ ПОГОВОРИМ. <br />
           ОТПРАВЬТЕ ЗАЯВКУ СЕЙЧАС
