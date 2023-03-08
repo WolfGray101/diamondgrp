@@ -935,6 +935,9 @@ width: 100%;     }
   .swiper-pagination-bullet-active {
     background: #000;
   }
+  .main-modal {
+    overflow: hidden;
+  }
 }
 @media screen and (min-width: 567px) and (max-width: 1120px) {
   .button {
@@ -942,6 +945,9 @@ width: 100%;     }
     padding: 1.25rem 2.5rem;
     line-height: 1.3rem;
     font-size: 1rem;
+  }
+  .main-modal {
+    overflow: hidden;
   }
   .header {
     align-items: center;
@@ -1297,6 +1303,7 @@ width: 100%;     }
      left: -3vw;
      top: -120%;
    }
+
 }
 
 @media screen and (min-width: 1120px) {
