@@ -12,22 +12,23 @@
     <link rel="stylesheet" href="css.css" />
   </head>
   <body>
-    <aside class="modal-container">
-      <div class="close-btn"></div>
-      <div class="modal__menu">
-        <div class="label-divider menu__label-divider--short"></div>
-        <div class="label-divider menu__label-divider--long"></div>
+    
 
-        <div class="modal__menu-item"><a href="/">Главная</a></div>
-        <div class="modal__menu-item"><a href="#offer">Предложение</a></div>
-        <div class="modal__menu-item"><a href="#teamm">Команда</a></div>
-        <div class="modal__menu-item"><a href="#price">Расчет</a></div>
-        <div class="modal__menu-item"><a href="#review">Отзывы</a></div>
-        <div class="modal__menu-item"><a href="#geetings">Преимущества</a></div>
-      </div>
-    </aside>
-
-    <main>
+    <main class="main">
+      <aside class="modal-container">
+        <div class="close-btn"></div>
+        <div class="modal__menu">
+          <div class="label-divider menu__label-divider--short"></div>
+          <div class="label-divider menu__label-divider--long"></div>
+  
+          <div class="modal__menu-item"><a href="/">Главная</a></div>
+          <div class="modal__menu-item"><a href="#offer">Предложение</a></div>
+          <div class="modal__menu-item"><a href="#teamm">Команда</a></div>
+          <div class="modal__menu-item"><a href="#price">Расчет</a></div>
+          <div class="modal__menu-item"><a href="#review">Отзывы</a></div>
+          <div class="modal__menu-item"><a href="#geetings">Преимущества</a></div>
+        </div>
+      </aside>
       <header class="header">
         <div class="header__logo"></div>
         <a href="tel:+1 (224) 470-3109" class="header__phone-num">
@@ -498,15 +499,57 @@
           <button class="button form-btn">ОТПРАВИТЬ СЕЙЧАС</button>
         </form>
       </section>
-    </main>
-
-    <footer class="footer">
-      <div class="copyright">2023 . Все права защищены</div>
-      <div class="footer-info">
-        <div class="footer-info__logo">
-          <a href="/"><img src="./img/logo.svg" alt="" /></a>
+      <footer class="footer">
+        <div class="copyright">2023 . Все права защищены</div>
+        <div class="footer-info">
+          <div class="footer-info__logo">
+            <a href="/"><img src="./img/logo.svg" alt="" /></a>
+          </div>
+          <div class="footer-info__social social footer-info__social--567">
+            <span>ПРИСОЕДИНЯЙСЯ К НАМ</span>
+            <div class="social-group">
+              <a href="" class="social-group__item social-group__item--utube"></a>
+              <a href="" class="social-group__item social-group__item-fb"></a>
+              <a href="" class="social-group__item social-group__item-ig"></a>
+            </div>
+          </div>
         </div>
-        <div class="footer-info__social social footer-info__social--567">
+        <ul class="footer-navigate">
+          <p>НАВИГАЦИЯ</p>
+          <li class="footer-navigate__item"><a href="/">Главная</a></li>
+          <li class="footer-navigate__item">
+            <a href="#offer" href="" class="footer-navigate__item">Предложение</a>
+          </li>
+          <li class="footer-navigate__item">
+            <a href="#teamm" class="footer-navigate__item">Команда</a>
+          </li>
+          <li class="footer-navigate__item">
+            <a href="#price" class="footer-navigate__item">Расчет</a>
+          </li>
+          <li class="footer-navigate__item">
+            <a href="#review" class="footer-navigate__item">Отзывы</a>
+          </li>
+          <li class="footer-navigate__item">
+            <a href="#greetings" class="footer-navigate__item">Преимущества</a>
+          </li>
+        </ul>
+  
+        <div class="footer-contacts">
+          <div class="address">
+            <span>АДРЕС</span>
+            <span class="location"
+              >89 W DOVER DR APT 2B DES PLAINES, IL 60018</span
+            >
+          </div>
+          <div class="footer-contacts__contact">
+            <span>КОНТАКТЫ</span>
+            <span class="footer-contacts__contact--phone">1 (224) 470-3109</span>
+            <span class="footer-contacts__contact--email"
+              >jobs@dgl-logistics.com</span
+            >
+          </div>
+        </div>
+        <div class="footer-info__social footer-info__social--320">
           <span>ПРИСОЕДИНЯЙСЯ К НАМ</span>
           <div class="social-group">
             <a href="" class="social-group__item social-group__item--utube"></a>
@@ -514,51 +557,10 @@
             <a href="" class="social-group__item social-group__item-ig"></a>
           </div>
         </div>
-      </div>
-      <ul class="footer-navigate">
-        <p>НАВИГАЦИЯ</p>
-        <li class="footer-navigate__item"><a href="/">Главная</a></li>
-        <li class="footer-navigate__item">
-          <a href="#offer" href="" class="footer-navigate__item">Предложение</a>
-        </li>
-        <li class="footer-navigate__item">
-          <a href="#teamm" class="footer-navigate__item">Команда</a>
-        </li>
-        <li class="footer-navigate__item">
-          <a href="#price" class="footer-navigate__item">Расчет</a>
-        </li>
-        <li class="footer-navigate__item">
-          <a href="#review" class="footer-navigate__item">Отзывы</a>
-        </li>
-        <li class="footer-navigate__item">
-          <a href="#greetings" class="footer-navigate__item">Преимущества</a>
-        </li>
-      </ul>
+      </footer>
+    </main>
 
-      <div class="footer-contacts">
-        <div class="address">
-          <span>АДРЕС</span>
-          <span class="location"
-            >89 W DOVER DR APT 2B DES PLAINES, IL 60018</span
-          >
-        </div>
-        <div class="footer-contacts__contact">
-          <span>КОНТАКТЫ</span>
-          <span class="footer-contacts__contact--phone">1 (224) 470-3109</span>
-          <span class="footer-contacts__contact--email"
-            >jobs@dgl-logistics.com</span
-          >
-        </div>
-      </div>
-      <div class="footer-info__social footer-info__social--320">
-        <span>ПРИСОЕДИНЯЙСЯ К НАМ</span>
-        <div class="social-group">
-          <a href="" class="social-group__item social-group__item--utube"></a>
-          <a href="" class="social-group__item social-group__item-fb"></a>
-          <a href="" class="social-group__item social-group__item-ig"></a>
-        </div>
-      </div>
-    </footer>
+ 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js.js"></script>

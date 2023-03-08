@@ -54,17 +54,17 @@ const menuItems = document.querySelectorAll('.modal__menu-item')
 const switchers = document.querySelectorAll('.switcher__label')
 const  closeBtn = document.querySelector('.close-btn')
 const switcherItems = document.querySelectorAll('.table-col')
+const main = document.querySelector('.main')
 
 openMenu.addEventListener('click', ()=> {
   modal.classList.add('modal-container__open')
-  body.style.overflow='hidden'
-  body.style.background='rgba(170, 170, 170, 1)'
+const screenHeight = window.innerHeight
+modal.style.height = `${screenHeight}px`
+
+
 })
 closeBtn.addEventListener('click', () => {
   modal.classList.remove('modal-container__open')
-  body.style.overflow='visible'
-  body.style.background='none'
-
 
 })
 for (let el of menuItems) {
@@ -73,13 +73,16 @@ for (let el of menuItems) {
     body.style.overflow='visible'
   })
 }
-console.log(switchers);
 for (let el of switchers) {
   el.addEventListener('click', () => {
+    el.classList
     for (let el of switchers) {
-      el.classList.remove('switcher__label--checked')  
+      el.classList.add('switcher__label--non-checked') 
+      el.classList.remove('switcher__label--checked')
+
     }
-   el.classList.add('switcher__label--checked')
+    el.classList.remove('switcher__label--non-checked')  
+    el.classList.add('switcher__label--checked')
     for (let elem of switcherItems){
     elem.style.visibility='hidden'
     elem.style.height=0

@@ -9,6 +9,18 @@ html {
   scroll-behavior: smooth;
   font-size: 15px;
 }
+body {
+  width: 100%;
+  position: relative;
+}
+.main {
+  position: sticky;
+  top: 0;
+
+}
+.main-modal {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
   transition-duration: 0.3s;
@@ -81,6 +93,7 @@ li:hover {
   background-size: 100%;
   background-position: center bottom;
   position: relative;
+  width: 100%;
 }
 .start-screen__header {
   background: #f4c53b;
@@ -184,12 +197,19 @@ figure > img {
   display: none;
 }
 .switcher__label--checked {
+  background: url(./img/switcher.png);
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: auto;
-  background-color: #f4c53b;
+  background-position: center left;
+  background-size: cover;
+/* transition-duration: .3s */
+}
+.switcher__label--non-checked {
+  background: url(./img/switcher-db.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+/* transition-duration: .3s */
 
-  transform: scale(1.02);
 }
 
 .table-header {
@@ -442,9 +462,7 @@ figure > img {
 .swiper-button-next {
   top: 30vw;
 }
-main {
-  position: relative;
-}
+
 .modal-container {
   background-color: #f4c53b;
   position: absolute;
@@ -456,7 +474,7 @@ main {
 .modal-container__open {
   width: 100vw;
   height: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   top: 0;
@@ -1541,8 +1559,11 @@ cursor: pointer;
   }
   .switcher__label {
     padding: 1vw 3.5vw;
-    width: 16vw;
-    font-size: 1.6vw;
+    width: 18vw;
+    font-size: 1.6vw; 
+  }
+  .switcher__label:hover {
+cursor: pointer;
   }
 
   .switcher__label--checked::after {
@@ -1678,6 +1699,9 @@ cursor: pointer;
   .fedback-block {
     padding: 4.5vw 0;
     background: url(./img/bg-full-footer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .fedback-block__header {
     font-size: 1.875vw;
@@ -1745,7 +1769,7 @@ cursor: pointer;
   .footer-info__social {
     text-align: center;
   }
-  .footer-info__social--567 {
+  .footer-info__social--320 {
     display: none;
   }
   .copyright {
