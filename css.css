@@ -182,36 +182,47 @@ figure > img {
 .switcher {
   display: flex;
 }
+
+.switcher-container {
+  background-color: #d2d2d2;
+  width:fit-content;
+  position: relative;
+}
 .switcher__label {
   font-weight: 600;
   transition-duration: 0.2s;
-}
-.switcher__label--disable {
-  background-color: #d9d9d9;
-}
-.switcher__label--disable:hover {
-  transform: scale(1.03);
-  transition-duration: 0.2s;
+  position: relative;
+  z-index: 2;
 }
 .switcher__label input {
   display: none;
 }
-.switcher__label--checked {
-  background: url(./img/switcher.png);
+.switcher__label--checked-solo:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  z-index: -1;
+  background: url(./img/switchersss.png);
   background-repeat: no-repeat;
   background-position: center left;
   background-size: cover;
-/* transition-duration: .3s */
 }
-.switcher__label--non-checked {
-  background: url(./img/switcher-db.png);
+.switcher__label--checked-team::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  z-index: -1;
+  background: url(./img/switchersss.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center left;
   background-size: cover;
-/* transition-duration: .3s */
-
 }
-
 .table-header {
   text-align: center;
   background-color: #f4c53b;
@@ -702,11 +713,12 @@ figure > img {
     font-weight: 600;
   }
   .switcher {
-    background-color: #d9d9d9;
+    /* background-color: #d9d9d9; */
   }
   .switcher-container {
     display: flex;
     width: 100%;
+    /* background-color: #d2d2d2; */
   }
   .switcher__label {
     padding: 0.5rem 1.5rem;
@@ -716,6 +728,10 @@ figure > img {
   .switcher__label--checked {
     background-size: cover;
     background-position: right;
+  }
+
+  .switcher__label--checked-team::before {
+ transform: rotate(180deg);
   }
   .table {
     padding: 1.5rem 0.5rem;
