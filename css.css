@@ -733,6 +733,9 @@ figure > img {
   .switcher__label--checked-team::before {
  transform: rotate(180deg);
   }
+  .switcher__label--checked-team::before,
+  .switcher__label--checked-solo::before {
+width: 100%;     }
   .table {
     padding: 1.5rem 0.5rem;
   }
