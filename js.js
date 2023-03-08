@@ -60,11 +60,13 @@ openMenu.addEventListener("click", () => {
   modal.classList.add("modal-container__open");
   const screenHeight = window.innerHeight;
   modal.style.height = `${screenHeight}px`;
+  main.style.height = `${screenHeight}px`;
   main.classList.add('main-modal')
 });
 closeBtn.addEventListener("click", () => {
   modal.classList.remove("modal-container__open");
   main.classList.remove('main-modal')
+  main.style.height = 'auto'
 
 });
 for (let el of menuItems) {

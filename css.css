@@ -18,9 +18,9 @@ body {
   top: 0;
 
 }
-.main-modal {
+/* .main-modal {
   overflow: hidden;
-}
+} */
 a {
   text-decoration: none;
   transition-duration: 0.3s;
